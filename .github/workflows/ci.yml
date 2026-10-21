@@ -11,4 +11,4 @@ jobs:
       - run: pip install -r requirements-dev.txt
       - run: python -m pytest -q
       - name: Linter catches the Claude baseline (expected to score under 60)
-        run: "! python -m engine lint examples/northwind-synthetic/claude_baseline.md --min-score 60"
+        run: "! python -m engine lint examples/northwind/claude_baseline.md --min-score 60"
