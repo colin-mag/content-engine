@@ -7,8 +7,9 @@ It turns one 30-minute expert interview into a brief, a draft, an editorial revi
 channel-ready posts. It also tracks whether the brand shows up when buyers ask ChatGPT or
 Perplexity, and tells you which pages to protect, refresh, merge or kill based on pipeline, not traffic.
 
-Built by [Colin Maguire](#about). If you're hiring a content leader, start with
-**[BEAT_CLAUDE.md](BEAT_CLAUDE.md)**: it's the 3-minute version of how I think.
+Built by [Colin Maguire](#about). If you're hiring a content leader, start with the
+**[one-page overview](https://colin-mag.github.io/content-engine/)** or
+**[BEAT_CLAUDE.md](BEAT_CLAUDE.md)**, the 3-minute version of how I think.
 
 | **871%** | **1,400%** | **$220K+** | **$200M+** |
 |:---:|:---:|:---:|:---:|
