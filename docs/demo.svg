@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="302" viewBox="0 0 900 302" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">
+<style>
+.l{opacity:0;animation:show 13.6s infinite}
+@keyframes show{0%{opacity:0}2%{opacity:1}92%{opacity:1}100%{opacity:0}}
+</style>
+<rect width="900" height="302" rx="12" fill="#0b1220"/>
+<circle cx="24" cy="22" r="6" fill="#ef4444"/><circle cx="44" cy="22" r="6" fill="#f59e0b"/><circle cx="64" cy="22" r="6" fill="#22c55e"/>
+<text x="450.0" y="27" font-size="12" fill="#64748b" text-anchor="middle">content-engine</text>
+<text class="l" style="animation-delay:0.0s" x="24" y="64" font-size="14" fill="#e2e8f0"><tspan fill="#64748b">$ </tspan>python -m engine lint examples/northwind/claude_baseline.md</text>
+<text class="l" style="animation-delay:1.2s" x="24" y="94" font-size="14" fill="#5eead4"><tspan>  </tspan>Score: 44/100 · 219 words · 15 findings</text>
+<text class="l" style="animation-delay:2.4s" x="24" y="124" font-size="14" fill="#e2e8f0"><tspan fill="#64748b">$ </tspan>python -m engine ai-search score examples/northwind/ai-search</text>
+<text class="l" style="animation-delay:3.6s" x="24" y="154" font-size="14" fill="#5eead4"><tspan>  </tspan>scored 12 answers, 6 high-priority gaps. See summary.md</text>
+<text class="l" style="animation-delay:4.8s" x="24" y="184" font-size="14" fill="#e2e8f0"><tspan fill="#64748b">$ </tspan>python -m engine scorecard examples/northwind/content_inventory.csv</text>
+<text class="l" style="animation-delay:6.0s" x="24" y="214" font-size="14" fill="#5eead4"><tspan>  </tspan>PROTECT 4 · REFRESH 2 · CONSOLIDATE 1 · KILL 2 · WATCH 3</text>
+<text class="l" style="animation-delay:7.2s" x="24" y="244" font-size="14" fill="#e2e8f0"><tspan fill="#64748b">$ </tspan>python -m engine run runs/demo brief</text>
+<text class="l" style="animation-delay:8.4s" x="24" y="274" font-size="14" fill="#fbbf24"><tspan>  </tspan>Stopped: Pick an angle first: write it to chosen_angle.md in the run folder.</text>
+</svg>
