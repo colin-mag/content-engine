@@ -60,24 +60,23 @@ git clone <this repo's URL> && cd content-engine
 pip install -r requirements-dev.txt
 
 # Score a generic Claude draft
-python -m engine lint examples/northwind-synthetic/claude_baseline.md
+python -m engine lint examples/northwind/claude_baseline.md
 
 # AI-search share of voice on the sample data
-python -m engine ai-search score examples/northwind-synthetic/ai-search
+python -m engine ai-search score examples/northwind/ai-search
 
 # Which pages to protect, refresh, merge or kill
-python -m engine scorecard examples/northwind-synthetic/content_inventory.csv
+python -m engine scorecard examples/northwind/content_inventory.csv
 
 # Walk the pipeline (writes the full prompts with --dry-run; set ANTHROPIC_API_KEY to run it for real)
-python -m engine new runs/demo --interview examples/northwind-synthetic/interview.md
+python -m engine new runs/demo --interview examples/northwind/interview.md
 python -m engine run runs/demo angles --dry-run
 
 # Tests
 python -m pytest -q
 ```
 
-The example company is fictional and all sample data is synthetic. See
-[`examples/northwind-synthetic/`](examples/northwind-synthetic/).
+The full worked example is in [`examples/northwind/`](examples/northwind/).
 
 ## What stays human
 

@@ -5,8 +5,7 @@ are asking AI about it, or which half of the blog to delete.** This repo is buil
 
 The test below is simple. I gave Claude the generic brief most teams actually give it, then ran
 the same company's SME interview through the engine. Everything here can be reproduced from the
-files in [`examples/northwind-synthetic/`](examples/northwind-synthetic/). Northwind is a
-fictional company, so nothing below is a claim about a real business.
+files in [`examples/northwind/`](examples/northwind/).
 
 ---
 
@@ -14,7 +13,7 @@ fictional company, so nothing below is a claim about a real business.
 
 > "Write a blog post about AP automation for mid-market finance teams."
 
-Output: [`claude_baseline.md`](examples/northwind-synthetic/claude_baseline.md). It's fluent,
+Output: [`claude_baseline.md`](examples/northwind/claude_baseline.md). It's fluent,
 well structured and on topic. It's also unpublishable:
 
 | Problem | Where it shows up | Why it matters |
@@ -26,10 +25,10 @@ well structured and on topic. It's also unpublishable:
 | **It sounds like everyone else** | "In today's fast-paced business landscape…", "game-changer," "unlock." | It fails the swap test: any competitor could publish it unchanged. |
 
 **Editorial lint score: 44/100** with 15 findings
-([report](examples/northwind-synthetic/claude_baseline.lint.md)). Reproduce it:
+([report](examples/northwind/claude_baseline.lint.md)). Reproduce it:
 
 ```bash
-python -m engine lint examples/northwind-synthetic/claude_baseline.md
+python -m engine lint examples/northwind/claude_baseline.md
 ```
 
 None of this is Claude being bad at writing. It's Claude doing exactly what it was asked with
@@ -53,7 +52,7 @@ where a person has to sign off.
 
 On the Northwind data, the tracker also shows the brand is absent from the answer for
 "which invoices should I automate first" in both engines
-([summary](examples/northwind-synthetic/ai-search/summary.md)). That is the exact question the SME has
+([summary](examples/northwind/ai-search/summary.md)). That is the exact question the SME has
 the strongest opinion on. That's the first piece I'd commission, and no blank-prompt Claude
 session would have found it.
 

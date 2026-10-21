@@ -3,7 +3,7 @@
 How I'd run a B2B content function where agents do the production work and people do the
 judgment. The code in this repo is one implementation. This page is the operating model behind it.
 
-Every number on this page is a planning assumption, labeled as such. 
+Every number on this page is a planning assumption, labeled as such.
 
 ---
 
