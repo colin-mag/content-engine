@@ -63,13 +63,12 @@ executive ghostwriting.
 
 ---
 
-## Open Athletes: Co-founder, growth (2026–present)
+## Open Athletes: built the content and distribution system (2026)
 
 A live show and media platform helping former athletes and military veterans move into the
-workforce, plus an athlete-entrepreneurship venture built around it.
+workforce.
 
-**What I own:** the growth thesis and go-to-market, positioning, YouTube and social strategy,
-distribution systems and paid media.
+**Scope:** growth strategy, positioning, YouTube and social, distribution systems and paid media.
 
 **What I built: Launchcodex**, a pre-publish production system for every episode, run with Claude:
 
