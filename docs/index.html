@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Content Engine · Colin Maguire</title>
+<meta name="description" content="An AI-native operating system for a B2B content team: AI does the production, people make the calls. Built by Colin Maguire.">
+<meta property="og:title" content="Content Engine · Colin Maguire">
+<meta property="og:description" content="AI does the production, people make the calls. 871% ChatGPT visibility, 1,400% AI Overview mentions, $220K+ saved.">
+<meta property="og:image" content="https://colin-mag.github.io/content-engine/dashboard.svg">
+<style>
+:root{
+  --bg:#fafaf9; --surface:#ffffff; --ink:#0f172a; --muted:#64748b; --line:#e7e5e4;
+  --accent:#0f766e; --accent-soft:#ccfbf1; --warn:#b45309; --warn-soft:#fef3c7;
+  --max:1040px;
+}
+@media (prefers-color-scheme: dark){
+  :root{--bg:#0c0f14; --surface:#141922; --ink:#e5e7eb; --muted:#94a3b8; --line:#232a36;
+        --accent:#2dd4bf; --accent-soft:#0f2e2b; --warn:#fbbf24; --warn-soft:#2d2410;}
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:20px 0;font-size:15px}
+header.top .name{font-weight:650;letter-spacing:-.01em}
+header.top nav a{color:var(--muted);text-decoration:none;margin-left:20px}
+header.top nav a:hover{color:var(--ink)}
+.hero{padding:56px 0 40px}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+h1{font-size:clamp(34px,5.4vw,56px);line-height:1.08;letter-spacing:-.025em;margin:14px 0 18px;max-width:820px}
+.lede{font-size:clamp(18px,2.2vw,21px);color:var(--muted);max-width:700px;margin:0}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-block;padding:12px 20px;border-radius:10px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid var(--line);background:var(--surface)}
+.btn.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btn:hover{transform:translateY(-1px)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:20px 0 8px}
+.stat{background:var(--surface);padding:22px 20px}
+.stat b{display:block;font-size:clamp(26px,3.4vw,36px);letter-spacing:-.02em;line-height:1.1}
+.stat span{color:var(--muted);font-size:14px}
+.clients{color:var(--muted);font-size:14px;margin:14px 0 48px}
+.clients strong{color:var(--ink);font-weight:600}
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(26px,3.4vw,34px);letter-spacing:-.02em;line-height:1.15;margin:0 0 12px;max-width:760px}
+.sub{color:var(--muted);max-width:680px;margin:0 0 28px}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px}
+.card h3{margin:0 0 6px;font-size:18px}
+.card .tag{display:inline-block;font-size:12px;font-weight:600;padding:3px 9px;border-radius:999px;margin-bottom:12px}
+.tag.bad{background:var(--warn-soft);color:var(--warn)}
+.tag.good{background:var(--accent-soft);color:var(--accent)}
+.card ul{margin:0;padding-left:18px}
+.card li{margin:6px 0}
+.score{font-size:44px;font-weight:700;color:var(--warn);letter-spacing:-.02em;line-height:1}
+.score small{font-size:18px;color:var(--muted);font-weight:500}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:8px 0 18px}
+.step{padding:9px 14px;border-radius:10px;border:1px solid var(--line);background:var(--surface);font-size:15px;font-weight:500}
+.step.gate{background:var(--accent-soft);border-color:transparent;color:var(--accent);font-weight:650}
+.arrow{color:var(--muted)}
+.legend{font-size:14px;color:var(--muted)}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;background:var(--accent-soft);vertical-align:-1px;margin-right:6px;border:1px solid var(--accent)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.grid3 .card p{margin:0;color:var(--muted);font-size:15px}
+figure{margin:28px 0 0}
+figure img{width:100%;height:auto;display:block;border-radius:14px}
+figcaption{font-size:14px;color:var(--muted);margin-top:10px}
+.human{columns:2;column-gap:40px;padding-left:20px;margin:0}
+.human li{break-inside:avoid;margin:0 0 12px}
+.roles{display:grid;gap:14px}
+.role{display:grid;grid-template-columns:220px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)}
+.role:last-child{border-bottom:0}
+.role .when{color:var(--muted);font-size:14px}
+.role h3{margin:0;font-size:17px}
+.role p{margin:4px 0 0;color:var(--muted);font-size:15px}
+footer{border-top:1px solid var(--line);padding:40px 0 60px}
+footer h2{margin-bottom:8px}
+@media (max-width:760px){
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .compare,.grid3{grid-template-columns:1fr}
+  .human{columns:1}
+  .role{grid-template-columns:1fr;gap:4px}
+  header.top nav a:not(:last-child){display:none}
+  .hero{padding-top:28px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <span class="name">Colin Maguire</span>
+    <nav>
+      <a href="#how">How it works</a>
+      <a href="#results">Results</a>
+      <a href="https://github.com/colin-mag/content-engine">Code</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div class="eyebrow">Content Engine</div>
+    <h1>AI does the production. People make the calls.</h1>
+    <p class="lede">An operating system for a B2B content team. It turns one expert interview into a week of content, tracks whether buyers find you in ChatGPT and Perplexity, and decides what to keep or cut based on pipeline, not traffic.</p>
+    <div class="cta">
+      <a class="btn primary" href="https://github.com/colin-mag/content-engine/blob/main/BEAT_CLAUDE.md">Read: Beat Claude</a>
+      <a class="btn" href="https://github.com/colin-mag/content-engine">See the code</a>
+      <a class="btn" href="https://www.linkedin.com/in/colin-maguire88">LinkedIn</a>
+    </div>
+  </div>
+
+  <div class="stats" aria-label="Results">
+    <div class="stat"><b>871%</b><span>ChatGPT visibility</span></div>
+    <div class="stat"><b>1,400%</b><span>Google AI Overview mentions</span></div>
+    <div class="stat"><b>$220K+</b><span>annual cost savings</span></div>
+    <div class="stat"><b>$200M+</b><span>ad spend supported</span></div>
+  </div>
+  <p class="clients">14 years leading content for <strong>Reddit · Uber · DoorDash · Ramp · MetaMask · Brightwheel · Zenefits · Podium</strong></p>
+
+  <section>
+    <h2>Every team has the same model. The system around it is the advantage.</h2>
+    <p class="sub">I gave Claude the prompt most content teams use, then ran the same company's expert interview through the engine.</p>
+    <div class="compare">
+      <div class="card">
+        <span class="tag bad">The usual prompt</span>
+        <h3>"Write a blog post about AP automation."</h3>
+        <p class="score">44<small>/100 editorial score</small></p>
+        <ul>
+          <li>Contradicts the company's own expert</li>
+          <li>Repeats the myth the expert wants to kill</li>
+          <li>Invents two statistics</li>
+          <li>Could carry any competitor's logo</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="tag good">The same model, inside a system</span>
+        <h3>Grounded, checked, approved</h3>
+        <ul>
+          <li>Every angle quotes the expert. No quote, no angle.</li>
+          <li>Drafts can only use approved, sourced numbers</li>
+          <li>A linter blocks generic AI phrasing before an editor sees it</li>
+          <li>Targets the buyer questions where the brand is missing from AI answers</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <h2>How it works</h2>
+    <p class="sub">Agents handle the hours. Three decisions are locked in the code so nobody can skip them under deadline pressure.</p>
+    <div class="flow" aria-label="Pipeline">
+      <span class="step">Expert interview</span><span class="arrow">→</span>
+      <span class="step">Angles</span><span class="arrow">→</span>
+      <span class="step gate">Editor picks the angle</span><span class="arrow">→</span>
+      <span class="step">Brief</span><span class="arrow">→</span>
+      <span class="step gate">Expert approves the numbers</span><span class="arrow">→</span>
+      <span class="step">Draft + review</span><span class="arrow">→</span>
+      <span class="step gate">Editor ships</span><span class="arrow">→</span>
+      <span class="step">LinkedIn, newsletter, video, sales</span>
+    </div>
+    <p class="legend"><i></i>Human checkpoints</p>
+
+    <div class="grid3">
+      <div class="card"><h3>AI-search tracker</h3><p>Measures how often the brand is named and cited in ChatGPT and Perplexity answers to real buyer questions. Every gap becomes a brief.</p></div>
+      <div class="card"><h3>Content scorecard</h3><p>Gives every page one call: protect, refresh, consolidate, kill or watch. Decided by pipeline per dollar, not pageviews.</p></div>
+      <div class="card"><h3>Editorial linter</h3><p>Catches banned phrases, AI tics and unsourced numbers automatically, so editors spend their time on the argument.</p></div>
+    </div>
+
+    <figure>
+      <img src="dashboard.svg" alt="Lint score of 44 out of 100, AI-search share of voice of 33% against competitors at 58% and 42%, and a content scorecard of 12 pages" loading="lazy">
+      <figcaption>Output from the worked example in the repo: a mid-market accounts-payable company.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>What stays human</h2>
+    <p class="sub">AI does most of the hours. None of the decisions.</p>
+    <ul class="human">
+      <li><b>Picking the angle.</b> Deciding what the company believes is the job.</li>
+      <li><b>Approving every number.</b> Each stat and quote has an owner before it reaches a draft.</li>
+      <li><b>The ship decision.</b> The review informs it. A person makes it.</li>
+      <li><b>Anything under a person's name.</b> Experts approve their own posts.</li>
+      <li><b>Killing content.</b> The scorecard recommends. A person decides.</li>
+      <li><b>The interview.</b> The best material comes from a follow-up a person thought to ask.</li>
+    </ul>
+  </section>
+
+  <section id="results">
+    <h2>Track record</h2>
+    <p class="sub">The same thinking, applied to real programs.</p>
+    <div class="roles">
+      <div class="role"><div><h3>Thatch</h3><div class="when">Content Lead · May 2025–present</div></div>
+        <p>Grew ChatGPT visibility 871%, AI citations 130% and AI Overview mentions 1,400%. Cut $220K+ a year by replacing three agencies. Grew organic users 41% and conversions 28% through a full site migration. Built continuing-education programs approved in 21 states.</p></div>
+      <div class="role"><div><h3>Right Percent</h3><div class="when">Director of Content Strategy · 2020–2025</div></div>
+        <p>Led teams of 15+ for venture-backed companies. Ran content strategy behind $200M+ in ad investment. Built AI content workflows for research, production and quality control.</p></div>
+      <div class="role"><div><h3>Layover Marketing</h3><div class="when">Co-founder · 2015–2020</div></div>
+        <p>Built and ran a content company on SEO-led programs, landing pages and executive ghostwriting.</p></div>
+      <div class="role"><div><h3>NYU Stern</h3><div class="when">Guest instructor · 2024–present</div></div>
+        <p>Teaches B2B content strategy and AI search to graduate students.</p></div>
+    </div>
+    <p style="margin-top:20px"><a href="https://github.com/colin-mag/content-engine/blob/main/TRACK_RECORD.md">Full track record →</a></p>
+  </section>
+
+  <footer>
+    <h2>Let's talk.</h2>
+    <p class="sub">I'm looking for a Head of Content role where AI is part of how the team works.</p>
+    <div class="cta">
+      <a class="btn primary" href="mailto:colin.maguire88@gmail.com">colin.maguire88@gmail.com</a>
+      <a class="btn" href="https://www.linkedin.com/in/colin-maguire88">LinkedIn</a>
+      <a class="btn" href="https://github.com/colin-mag/content-engine">See the code</a>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
