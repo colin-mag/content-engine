@@ -1,0 +1,13 @@
+url,buyer_question,age_months,sessions_now,sessions_prior,ai_citations,influenced_pipeline,sourced_pipeline,cost,session_change,pipeline_per_dollar,decision,reason
+/blog/what-is-ap-automation,what is ap automation,40.0,3100.0,5200.0,1.0,42000.0,0.0,900.0,-0.4,46.7,REFRESH,Earns pipeline but sessions are down 40%
+/blog/ap-automation-guide,what is ap automation,22.0,380.0,610.0,0.0,0.0,0.0,600.0,-0.38,0.0,CONSOLIDATE,Overlaps with /blog/what-is-ap-automation on the same buyer question
+/blog/invoice-approval-workflows,how to automate invoice approvals,18.0,1450.0,1500.0,2.0,61000.0,18000.0,1200.0,-0.03,65.8,PROTECT,Earning pipeline or AI citations
+/blog/audit-trail-for-ap,how to automate invoice approvals without losing audit control,9.0,520.0,300.0,3.0,27000.0,9000.0,800.0,0.73,45.0,PROTECT,Earning pipeline or AI citations
+/blog/3-way-matching-explained,what is 3-way matching,30.0,2200.0,2350.0,0.0,0.0,0.0,500.0,-0.06,0.0,WATCH,Traffic but no pipeline yet; check conversion path
+/blog/ap-kpis-cfo,which ap metrics matter to a cfo,26.0,1100.0,2050.0,0.0,38000.0,0.0,700.0,-0.46,54.3,REFRESH,Earns pipeline but sessions are down 46%
+/blog/ap-trends-2023,ap automation trends,34.0,40.0,900.0,0.0,0.0,0.0,450.0,-0.96,0.0,KILL,"No pipeline, no citations, negligible traffic after a year"
+/blog/month-end-close-checklist,how to speed up month end close,14.0,2600.0,2400.0,1.0,0.0,22000.0,1100.0,0.08,20.0,PROTECT,Earning pipeline or AI citations
+/blog/vendor-onboarding-template,vendor onboarding template,20.0,30.0,45.0,0.0,0.0,0.0,300.0,-0.33,0.0,KILL,"No pipeline, no citations, negligible traffic after a year"
+/blog/touchless-invoice-myth,is 100% touchless invoice processing realistic,3.0,210.0,0.0,1.0,0.0,0.0,850.0,0.0,0.0,WATCH,Too new to judge
+/compare/northwind-vs-brightledger,brightledger vs northwind,12.0,640.0,700.0,1.0,74000.0,31000.0,1500.0,-0.09,70.0,PROTECT,Earning pipeline or AI citations
+/blog/ocr-accuracy-benchmarks,how accurate is invoice ocr,28.0,900.0,1600.0,0.0,0.0,0.0,650.0,-0.44,0.0,WATCH,Traffic but no pipeline yet; check conversion path
