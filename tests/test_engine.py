@@ -7,7 +7,7 @@ import pytest
 from engine import ai_search, lint, pipeline, scorecard
 
 ROOT = Path(__file__).resolve().parent.parent
-EXAMPLE = ROOT / "examples" / "northwind-synthetic"
+EXAMPLE = ROOT / "examples" / "northwind"
 
 
 # ---------- linter ----------
