@@ -1,0 +1,7 @@
+{
+  "brand": {"name": "Northwind", "aliases": ["Northwind AP"], "domain": "northwind.example"},
+  "competitors": [
+    {"name": "Brightledger", "aliases": [], "domain": "brightledger.example"},
+    {"name": "Countwell", "aliases": [], "domain": "countwell.example"}
+  ]
+}

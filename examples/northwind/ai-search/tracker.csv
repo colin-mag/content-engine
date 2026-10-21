@@ -1,0 +1,13 @@
+query,intent,priority,engine,brand_mentioned,brand_rank,brand_cited,competitors_mentioned
+best accounts payable automation software for mid-market companies,vendor shortlist,high,chatgpt,True,3,False,Brightledger;Countwell
+best accounts payable automation software for mid-market companies,vendor shortlist,high,perplexity,False,,False,Countwell;Brightledger
+how to automate invoice approvals without losing audit control,problem,high,chatgpt,False,,False,Brightledger;Countwell
+how to automate invoice approvals without losing audit control,problem,high,perplexity,True,1,True,
+which invoices should I automate first,problem,high,chatgpt,False,,False,
+which invoices should I automate first,problem,high,perplexity,False,,False,Brightledger
+is 100% touchless invoice processing realistic,belief,medium,chatgpt,False,,False,Countwell
+is 100% touchless invoice processing realistic,belief,medium,perplexity,False,,False,
+how does AP automation affect month-end close,outcome,high,chatgpt,False,,False,Brightledger
+how does AP automation affect month-end close,outcome,high,perplexity,False,,False,Countwell
+Brightledger vs Northwind,comparison,medium,chatgpt,True,2,True,Brightledger
+Brightledger vs Northwind,comparison,medium,perplexity,True,2,True,Brightledger
