@@ -1,0 +1,46 @@
+# Phrases that signal unedited AI output or empty marketing copy.
+# One per line, case-insensitive, matched on word boundaries.
+# This list is the team's shared taste, written down. Add to it every time an editor
+# has to fix the same thing twice.
+delve
+delves
+delving
+tapestry
+testament to
+game-changer
+game changer
+unlock the power
+unleash
+unlocking
+navigate the complexities
+ever-evolving
+ever-changing landscape
+in the realm of
+it's important to note
+it is important to note
+it's worth noting
+in conclusion
+seamlessly
+seamless
+robust
+leverage
+synergy
+cutting-edge
+revolutionize
+revolutionizing
+supercharge
+elevate your
+harness the power
+paradigm shift
+at the end of the day
+look no further
+dive deep
+deep dive
+whether you're a
+the power of
+take it to the next level
+best practices
+holistic
+empower
+empowers
+transformative
