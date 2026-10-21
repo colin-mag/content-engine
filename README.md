@@ -10,6 +10,15 @@ Perplexity, and tells you which pages to protect, refresh, merge or kill based o
 Built by [Colin Maguire](#about). If you're hiring a content leader, start with
 **[BEAT_CLAUDE.md](BEAT_CLAUDE.md)**: it's the 3-minute version of how I think.
 
+| **871%** | **1,400%** | **$220K+** | **$200M+** |
+|:---:|:---:|:---:|:---:|
+| ChatGPT visibility | AI Overview mentions | annual cost savings | ad spend supported |
+
+14 years leading content for companies like Reddit, Uber, DoorDash and Ramp. Full results in
+[TRACK_RECORD.md](TRACK_RECORD.md).
+
+![Lint score, AI-search share of voice and content scorecard from the Northwind example](docs/dashboard.svg)
+
 ---
 
 ## Why this exists
@@ -54,6 +63,8 @@ The hexagons are human checkpoints. Three of them are enforced in code: the brie
 `chosen_angle.md`, and drafting and repurposing won't run without an `engine approve` record.
 
 ## Try it in two minutes (no API key needed)
+
+![The engine running on the Northwind example](docs/demo.svg)
 
 ```bash
 git clone <this repo's URL> && cd content-engine

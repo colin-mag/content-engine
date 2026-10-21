@@ -16,7 +16,7 @@ regulated industries.
 
 ---
 
-## Thatch: Content Lead (2025)
+## Thatch: Content Lead (May 2025–present)
 
 Led company-wide content for a high-growth healthcare startup: website, AI search, SEO, executive
 communications, product launches, sales enablement, broker education, campaigns and editorial
