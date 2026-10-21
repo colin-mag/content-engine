@@ -96,9 +96,11 @@ name, killing pages, and claims about customers or competitors. The reasoning is
 
 ## About
 
-I'm **Colin Maguire**, a B2B content leader in Los Angeles. I was Director of Content Strategy at
-Right Percent (2020–2025), co-founded Layover Marketing (2015–2020), led content at Thatch, and teach
-B2B content strategy and AI search as a guest instructor at NYU Stern.
+I'm **Colin Maguire**, a content marketing leader in Los Angeles with 14 years in technology, healthcare
+and regulated industries. At Thatch I grew ChatGPT visibility 871% and AI Overview mentions 1,400% while
+cutting $220K+ in annual agency costs. Before that I was Director of Content Strategy at Right Percent
+(2020–2025), working with clients like Reddit, Uber, DoorDash and Ramp, and co-founded Layover Marketing
+(2015–2020). I teach B2B content strategy and AI search as a guest instructor at NYU Stern.
 
 What I've built, including the AI production system behind Open Athletes and an AI Google Ads diagnostic engine: **[TRACK_RECORD.md](TRACK_RECORD.md)**
 
