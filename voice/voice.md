@@ -1,6 +1,6 @@
 # Voice spec
 
-Every stage of the engine loads this file. Swap it out per brand. It is written as
+Every stage of the engine loads this file, and each brand gets its own. It is written as
 rules an editor can check, not adjectives ("friendly, bold, smart") a model can't act on.
 
 ## Who we write for
@@ -27,5 +27,5 @@ good in front of their boss.
 
 ## Examples
 **Weak:** "In today's fast-paced landscape, finance teams are leveraging AI to unlock efficiency."
-**Strong (illustrative):** "Most finance teams close the books in 6 days [Benchmarked: name the source]. The ones we interviewed who
-get it under 3 all did the same thing first: they stopped coding receipts by hand."
+**Strong:** "Every controller we interviewed who closes in three days did the same thing first:
+they stopped coding receipts by hand."
