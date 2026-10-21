@@ -89,6 +89,14 @@ text(x, y + 14, "Decided by pipeline per $, decay and overlap", 12, MUTED)
 s.append("</svg>")
 (out / "dashboard.svg").write_text("\n".join(s) + "\n")
 
+# Dark variant for the landing page
+dark = "\n".join(s) + "\n"
+for light, dk in [("#ffffff", "#14161b"), ("#0f172a", "#f4f4f5"), ("#64748b", "#a1a1aa"),
+                  ("#e2e8f0", "#2a2e37"), ("#0f766e", "#2dd4bf"), ("#b45309", "#fbbf24"),
+                  ("#94a3b8", "#52525b")]:
+    dark = dark.replace(f'"{light}"', f'"{dk}"')
+(out / "dashboard-dark.svg").write_text(dark)
+
 # ---------- animated terminal ----------
 lines = [
     ("cmd", "python -m engine lint examples/northwind/claude_baseline.md"),
