@@ -4,97 +4,124 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Content Engine · Colin Maguire</title>
-<meta name="description" content="An AI-native operating system for a B2B content team: AI does the production, people make the calls. Built by Colin Maguire.">
+<meta name="description" content="The content operation Colin Maguire would run as your Head of Content: AI does the production, people make the calls.">
 <meta property="og:title" content="Content Engine · Colin Maguire">
-<meta property="og:description" content="AI does the production, people make the calls. 871% ChatGPT visibility, 1,400% AI Overview mentions, $220K+ saved.">
-<meta property="og:image" content="https://colin-mag.github.io/content-engine/dashboard.svg">
+<meta property="og:description" content="AI does the production. People make the calls. 871% ChatGPT visibility, 1,400% AI Overview mentions, $220K+ saved.">
+<meta name="theme-color" content="#0a0b0e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#fafaf9; --surface:#ffffff; --ink:#0f172a; --muted:#64748b; --line:#e7e5e4;
-  --accent:#0f766e; --accent-soft:#ccfbf1; --warn:#b45309; --warn-soft:#fef3c7;
-  --max:1040px;
-}
-@media (prefers-color-scheme: dark){
-  :root{--bg:#0c0f14; --surface:#141922; --ink:#e5e7eb; --muted:#94a3b8; --line:#232a36;
-        --accent:#2dd4bf; --accent-soft:#0f2e2b; --warn:#fbbf24; --warn-soft:#2d2410;}
+  --bg:#0a0b0e; --surface:#121419; --surface-2:#171a20; --ink:#f4f4f5; --muted:#a1a1aa; --faint:#71717a;
+  --line:#22252c; --accent:#2dd4bf; --accent-ink:#04201c; --warn:#fbbf24; --max:1080px;
 }
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;overflow-x:hidden}
+body{overflow-x:hidden}
+body{margin:0;background:radial-gradient(1100px 560px at 15% -8%,rgba(45,212,191,.11),transparent 65%) no-repeat,var(--bg);color:var(--ink);font:17px/1.65 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
 a{color:inherit}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
-header.top{display:flex;justify-content:space-between;align-items:center;padding:20px 0;font-size:15px}
-header.top .name{font-weight:650;letter-spacing:-.01em}
-header.top nav a{color:var(--muted);text-decoration:none;margin-left:20px}
-header.top nav a:hover{color:var(--ink)}
-.hero{padding:56px 0 40px}
-.eyebrow{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
-h1{font-size:clamp(34px,5.4vw,56px);line-height:1.08;letter-spacing:-.025em;margin:14px 0 18px;max-width:820px}
-.lede{font-size:clamp(18px,2.2vw,21px);color:var(--muted);max-width:700px;margin:0}
-.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
-.btn{display:inline-block;padding:12px 20px;border-radius:10px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid var(--line);background:var(--surface)}
-.btn.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.btn:hover{transform:translateY(-1px)}
-.doors{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:36px}
-.door{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:28px;text-decoration:none;color:var(--ink);transition:border-color .15s,transform .15s}
-.door:hover{border-color:var(--accent);transform:translateY(-2px)}
-.door .kicker{font-size:12px;font-weight:650;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
-.door h2{font-size:24px;margin:10px 0 10px;line-height:1.2}
-.door p{margin:0 0 14px;color:var(--muted);font-size:16px}
-.door ul{margin:0 0 22px;padding-left:18px;font-size:15px}
-.door li{margin:7px 0}
-.door .go{margin-top:auto;display:inline-flex;align-self:flex-start;padding:12px 20px;border-radius:10px;font-weight:650;font-size:15px;background:var(--ink);color:var(--bg)}
-.door.code .go{background:var(--surface);color:var(--ink);border:1px solid var(--line)}
-.door .who{font-size:13px;color:var(--muted);margin:0 0 6px}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:20px 0 8px}
-.stat{background:var(--surface);padding:22px 20px}
-.stat b{display:block;font-size:clamp(26px,3.4vw,36px);letter-spacing:-.02em;line-height:1.1}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+
+/* nav */
+.top{display:flex;justify-content:space-between;align-items:center;padding:22px 0;font-size:14px}
+.top .name{font-weight:600;letter-spacing:-.01em}
+.top nav a{color:var(--muted);text-decoration:none;margin-left:24px;transition:color .15s}
+.top nav a:hover{color:var(--ink)}
+
+/* hero */
+.hero{position:relative;padding:72px 0 8px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:500;color:var(--muted);
+  border:1px solid var(--line);border-radius:999px;padding:6px 14px 6px 10px;background:rgba(255,255,255,.02)}
+.eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent)}
+h1{font-size:clamp(36px,6.6vw,76px);line-height:1.02;letter-spacing:-.04em;font-weight:800;margin:28px 0 26px}
+h1 span{display:block}
+h1 .dim{color:var(--faint)}
+.lede{font-size:clamp(18px,2vw,21px);line-height:1.6;color:var(--muted);max-width:640px;margin:0}
+.lede b{color:var(--ink);font-weight:600}
+.proof{margin:28px 0 0;font-size:14px;color:var(--faint)}
+.proof b{color:var(--muted);font-weight:500}
+
+/* two doors */
+.doors{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:48px}
+.door{position:relative;display:flex;flex-direction:column;padding:30px;border-radius:18px;text-decoration:none;
+  background:linear-gradient(180deg,var(--surface-2),var(--surface));border:1px solid var(--line);
+  transition:border-color .2s,transform .2s}
+.door:hover{border-color:rgba(45,212,191,.5);transform:translateY(-3px)}
+.door .kicker{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.door h2{font-size:25px;line-height:1.2;letter-spacing:-.02em;margin:12px 0 12px;font-weight:700}
+.door p{margin:0 0 18px;color:var(--muted);font-size:16px}
+.door ul{list-style:none;margin:0 0 26px;padding:0;font-size:15px;color:#d4d4d8}
+.door li{position:relative;padding-left:22px;margin:10px 0}
+.door li::before{content:"";position:absolute;left:0;top:.62em;width:10px;height:2px;background:var(--accent)}
+.door li b{color:var(--ink);font-weight:600}
+.go{margin-top:auto;align-self:flex-start;display:inline-flex;gap:8px;padding:12px 20px;border-radius:10px;font-weight:600;font-size:15px}
+.door.primary .go{background:var(--accent);color:var(--accent-ink)}
+.door.secondary .go{border:1px solid var(--line);color:var(--ink)}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);margin:72px 0 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stat{padding:28px 4px}
+.stat+.stat{border-left:1px solid var(--line);padding-left:24px}
+.stat b{display:block;font-size:clamp(30px,3.8vw,44px);font-weight:700;letter-spacing:-.03em;line-height:1.05}
 .stat span{color:var(--muted);font-size:14px}
-.clients{color:var(--muted);font-size:14px;margin:14px 0 48px}
-.clients strong{color:var(--ink);font-weight:600}
-section{padding:56px 0;border-top:1px solid var(--line)}
-h2{font-size:clamp(26px,3.4vw,34px);letter-spacing:-.02em;line-height:1.15;margin:0 0 12px;max-width:760px}
-.sub{color:var(--muted);max-width:680px;margin:0 0 28px}
-.compare{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px}
-.card h3{margin:0 0 6px;font-size:18px}
-.card .tag{display:inline-block;font-size:12px;font-weight:600;padding:3px 9px;border-radius:999px;margin-bottom:12px}
-.tag.bad{background:var(--warn-soft);color:var(--warn)}
-.tag.good{background:var(--accent-soft);color:var(--accent)}
-.card ul{margin:0;padding-left:18px}
-.card li{margin:6px 0}
-.score{font-size:44px;font-weight:700;color:var(--warn);letter-spacing:-.02em;line-height:1}
-.score small{font-size:18px;color:var(--muted);font-weight:500}
-.flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:8px 0 18px}
-.step{padding:9px 14px;border-radius:10px;border:1px solid var(--line);background:var(--surface);font-size:15px;font-weight:500}
-.step.gate{background:var(--accent-soft);border-color:transparent;color:var(--accent);font-weight:650}
-.arrow{color:var(--muted)}
-.legend{font-size:14px;color:var(--muted)}
-.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;background:var(--accent-soft);vertical-align:-1px;margin-right:6px;border:1px solid var(--accent)}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
-.grid3 .card p{margin:0;color:var(--muted);font-size:15px}
-figure{margin:28px 0 0}
-figure img{width:100%;height:auto;display:block;border-radius:14px}
-figcaption{font-size:14px;color:var(--muted);margin-top:10px}
-.human{columns:2;column-gap:40px;padding-left:20px;margin:0}
-.human li{break-inside:avoid;margin:0 0 12px}
-.roles{display:grid;gap:14px}
-.role{display:grid;grid-template-columns:220px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)}
-.role:last-child{border-bottom:0}
-.role .when{color:var(--muted);font-size:14px}
-.role h3{margin:0;font-size:17px}
-.role p{margin:4px 0 0;color:var(--muted);font-size:15px}
-footer{border-top:1px solid var(--line);padding:40px 0 60px}
-footer h2{margin-bottom:8px}
-@media (max-width:760px){
-  .doors{grid-template-columns:1fr}
-  .door{padding:22px}
-  .stats{grid-template-columns:repeat(2,1fr)}
-  .compare,.grid3{grid-template-columns:1fr}
-  .human{columns:1}
-  .role{grid-template-columns:1fr;gap:4px}
-  header.top nav a:not(:last-child){display:none}
-  .hero{padding-top:28px}
+
+/* sections */
+section{padding:96px 0 0}
+.label{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin:0 0 14px}
+h3.title{font-size:clamp(28px,3.6vw,40px);line-height:1.12;letter-spacing:-.03em;font-weight:700;margin:0 0 14px;max-width:760px}
+.sub{color:var(--muted);max-width:640px;margin:0 0 36px}
+
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px}
+.panel .tag{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.panel.bad .tag{color:var(--warn)}
+.panel.good .tag{color:var(--accent)}
+.panel h4{font-size:19px;margin:10px 0 16px;font-weight:600;letter-spacing:-.01em}
+.score{font-size:56px;font-weight:800;letter-spacing:-.04em;color:var(--warn);line-height:1;margin:0 0 18px}
+.score small{font-size:18px;color:var(--faint);font-weight:500;letter-spacing:0}
+.panel ul{margin:0;padding-left:18px;color:#d4d4d8}
+.panel li{margin:8px 0}
+
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:0 0 14px}
+.step{padding:10px 15px;border-radius:10px;border:1px solid var(--line);background:var(--surface);font-size:15px}
+.step.gate{border-color:rgba(45,212,191,.45);background:rgba(45,212,191,.08);color:var(--accent);font-weight:600}
+.arrow{color:var(--faint)}
+.legend{font-size:13px;color:var(--faint);margin:0 0 36px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;border:1px solid var(--accent);background:rgba(45,212,191,.15);margin-right:8px;vertical-align:-1px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.grid3 .panel h4{margin-top:0}
+.grid3 .panel p{margin:0;color:var(--muted);font-size:15px}
+figure{margin:20px 0 0}
+figure img{width:100%;height:auto;display:block;border-radius:16px;border:1px solid var(--line)}
+figcaption{font-size:13px;color:var(--faint);margin-top:12px}
+
+.human{display:grid;grid-template-columns:1fr 1fr;gap:0 48px;margin:0;padding:0;list-style:none}
+.human li{padding:18px 0;border-top:1px solid var(--line);color:var(--muted)}
+.human b{display:block;color:var(--ink);font-weight:600;margin-bottom:2px}
+
+.role{display:grid;grid-template-columns:240px 1fr;gap:24px;padding:24px 0;border-top:1px solid var(--line)}
+.role h4{margin:0;font-size:18px;font-weight:600}
+.role .when{color:var(--faint);font-size:14px}
+.role p{margin:0;color:var(--muted)}
+.role p b{color:var(--ink);font-weight:600}
+.more{display:inline-block;margin-top:20px;color:var(--accent);text-decoration:none;font-weight:600}
+
+footer{margin-top:110px;padding:64px 0 80px;border-top:1px solid var(--line)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.btn{display:inline-block;padding:13px 22px;border-radius:10px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid var(--line)}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+
+@media (max-width:820px){
+  .doors,.compare,.grid3,.human{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr 1fr}
+  .stat:nth-child(3){border-left:0;padding-left:4px}
+  .stat:nth-child(n+3){border-top:1px solid var(--line)}
+  .role{grid-template-columns:1fr;gap:6px}
+  .top nav a:not(:last-child){display:none}
+  .hero{padding-top:40px}
+  .door{padding:24px}
+  section{padding-top:72px}
 }
 </style>
 </head>
@@ -104,62 +131,62 @@ footer h2{margin-bottom:8px}
     <span class="name">Colin Maguire</span>
     <nav>
       <a href="#how">How it works</a>
-      <a href="#results">Results</a>
+      <a href="#results">Track record</a>
       <a href="https://www.linkedin.com/in/colin-maguire88">LinkedIn</a>
     </nav>
   </header>
 
   <div class="hero">
-    <div class="eyebrow">Content Engine</div>
-    <h1>AI does the production. People make the calls.</h1>
-    <p class="lede">An operating system for a B2B content team. It turns one expert interview into a week of content, tracks whether buyers find you in ChatGPT and Perplexity, and decides what to keep or cut based on pipeline, not traffic.</p>
-    <div class="doors">
-      <a class="door" href="https://github.com/colin-mag/content-engine/blob/main/BEAT_CLAUDE.md">
-        <span class="kicker">Start here · 3-minute read</span>
-        <h2>Beat Claude: why generic AI content fails, and what fixes it</h2>
-        <p>I gave Claude the one-line prompt most content teams use, then scored what came back. It scored 44 out of 100. It contradicted the company's own expert, repeated the industry myth the expert wanted to kill, and invented two statistics. This write-up walks through every failure and the specific rule, checkpoint or tool that prevents it.</p>
-        <p class="who">Inside:</p>
-        <ul>
-          <li>The generic AI draft, side by side with what the company's expert actually said</li>
-          <li>The five failures that make AI content unpublishable, and why they cost credibility</li>
-          <li>How the same model performs once it's fed real source material and has to pass editorial checks</li>
-          <li>Where AI should do the work, and the decisions it should never make</li>
-        </ul>
-        <span class="go">Read Beat Claude →</span>
-      </a>
-      <a class="door code" href="https://github.com/colin-mag/content-engine">
-        <span class="kicker">Go deeper · runs in 2 minutes</span>
-        <h2>The code: a working content operation, not a slide deck</h2>
-        <p>The full system, built in Python on Claude and covered by automated tests. It comes with a complete worked example, an accounts-payable software company, so anyone can run every tool on real-looking data without an API key.</p>
-        <p class="who">Inside:</p>
-        <ul>
-          <li><b>Content pipeline:</b> turns one expert interview into angles, a brief, a draft and channel-ready posts, with human sign-offs the code won't let anyone skip</li>
-          <li><b>AI-search tracker:</b> how often a brand is named and cited in ChatGPT and Perplexity answers to real buyer questions</li>
-          <li><b>Content scorecard:</b> protect, refresh, merge or cut every page, based on pipeline per dollar instead of traffic</li>
-          <li><b>Editorial linter and voice spec:</b> catch AI phrasing and unsourced numbers before an editor has to</li>
-          <li><b>Playbook:</b> the team structure, weekly cadence and metrics behind it</li>
-        </ul>
-        <span class="go">See the code on GitHub →</span>
-      </a>
-    </div>
+    <span class="eyebrow"><i></i>Content Engine · portfolio project</span>
+    <h1><span>AI does the production.</span><span class="dim">People make the calls.</span></h1>
+    <p class="lede">This is the content operation I'd run for you. <b>One expert interview becomes a week of content.</b> Every page is judged on pipeline, not traffic. And you always know whether buyers find you in ChatGPT.</p>
+    <p class="proof">14 years in content · <b>Reddit, Uber, DoorDash, Ramp, MetaMask</b> · NYU Stern guest instructor</p>
+  </div>
+
+  <div class="doors">
+    <a class="door primary" href="https://github.com/colin-mag/content-engine/blob/main/BEAT_CLAUDE.md">
+      <span class="kicker">Start here · 3-minute read</span>
+      <h2>Beat Claude: why generic AI content fails, and what fixes it</h2>
+      <p>I gave Claude the one-line prompt most content teams use and scored the result: 44 out of 100. It contradicted the company's own expert. It repeated the myth the expert wanted to kill. It invented two statistics. This write-up walks through each failure and the exact rule that prevents it.</p>
+      <ul>
+        <li>The AI draft, side by side with what the expert actually said</li>
+        <li>Five failures that make AI content unpublishable</li>
+        <li>The same model inside a system with real source material and editorial checks</li>
+        <li>What AI should do, and the decisions it should never make</li>
+      </ul>
+      <span class="go">Read Beat Claude →</span>
+    </a>
+    <a class="door secondary" href="https://github.com/colin-mag/content-engine">
+      <span class="kicker">Go deeper · runs in 2 minutes</span>
+      <h2>The code: a working content operation, not a slide deck</h2>
+      <p>The full system, built in Python on Claude and covered by automated tests. It ships with a complete worked example, so anyone can run every tool without an API key.</p>
+      <ul>
+        <li><b>Content pipeline.</b> Interview to angles, brief, draft and channel posts, with sign-offs no one can skip.</li>
+        <li><b>AI-search tracker.</b> How often a brand is named and cited in ChatGPT and Perplexity.</li>
+        <li><b>Content scorecard.</b> Protect, refresh, merge or cut every page by pipeline per dollar.</li>
+        <li><b>Editorial linter.</b> Catches AI phrasing and unsourced numbers before an editor has to.</li>
+        <li><b>Playbook.</b> Team shape, weekly cadence and the metrics that matter.</li>
+      </ul>
+      <span class="go">See the code on GitHub →</span>
+    </a>
   </div>
 
   <div class="stats" aria-label="Results">
     <div class="stat"><b>871%</b><span>ChatGPT visibility</span></div>
-    <div class="stat"><b>1,400%</b><span>Google AI Overview mentions</span></div>
-    <div class="stat"><b>$220K+</b><span>annual cost savings</span></div>
+    <div class="stat"><b>1,400%</b><span>AI Overview mentions</span></div>
+    <div class="stat"><b>$220K+</b><span>saved per year</span></div>
     <div class="stat"><b>$200M+</b><span>ad spend supported</span></div>
   </div>
-  <p class="clients">14 years leading content for <strong>Reddit · Uber · DoorDash · Ramp · MetaMask · Brightwheel · Zenefits · Podium</strong></p>
 
   <section>
-    <h2>Every team has the same model. The system around it is the advantage.</h2>
-    <p class="sub">I gave Claude the prompt most content teams use, then ran the same company's expert interview through the engine.</p>
+    <p class="label">The problem</p>
+    <h3 class="title">Every team has the same model. The system around it is the advantage.</h3>
+    <p class="sub">Same company, same expert interview. One run with a blank prompt, one run through the engine.</p>
     <div class="compare">
-      <div class="card">
-        <span class="tag bad">The usual prompt</span>
-        <h3>"Write a blog post about AP automation."</h3>
-        <p class="score">44<small>/100 editorial score</small></p>
+      <div class="panel bad">
+        <span class="tag">The usual prompt</span>
+        <h4>"Write a blog post about AP automation."</h4>
+        <p class="score">44<small> / 100</small></p>
         <ul>
           <li>Contradicts the company's own expert</li>
           <li>Repeats the myth the expert wants to kill</li>
@@ -167,22 +194,23 @@ footer h2{margin-bottom:8px}
           <li>Could carry any competitor's logo</li>
         </ul>
       </div>
-      <div class="card">
-        <span class="tag good">The same model, inside a system</span>
-        <h3>Grounded, checked, approved</h3>
+      <div class="panel good">
+        <span class="tag">The same model, inside a system</span>
+        <h4>Grounded, checked, approved</h4>
         <ul>
           <li>Every angle quotes the expert. No quote, no angle.</li>
-          <li>Drafts can only use approved, sourced numbers</li>
+          <li>Drafts use only approved, sourced numbers</li>
           <li>A linter blocks generic AI phrasing before an editor sees it</li>
-          <li>Targets the buyer questions where the brand is missing from AI answers</li>
+          <li>Briefs target the buyer questions where the brand is missing from AI answers</li>
         </ul>
       </div>
     </div>
   </section>
 
   <section id="how">
-    <h2>How it works</h2>
-    <p class="sub">Agents handle the hours. Three decisions are locked in the code so nobody can skip them under deadline pressure.</p>
+    <p class="label">How it works</p>
+    <h3 class="title">Agents do the hours. Three decisions stay locked to people.</h3>
+    <p class="sub">The checkpoints live in the code, so nobody skips them under deadline pressure.</p>
     <div class="flow" aria-label="Pipeline">
       <span class="step">Expert interview</span><span class="arrow">→</span>
       <span class="step">Angles</span><span class="arrow">→</span>
@@ -194,50 +222,48 @@ footer h2{margin-bottom:8px}
       <span class="step">LinkedIn, newsletter, video, sales</span>
     </div>
     <p class="legend"><i></i>Human checkpoints</p>
-
     <div class="grid3">
-      <div class="card"><h3>AI-search tracker</h3><p>Measures how often the brand is named and cited in ChatGPT and Perplexity answers to real buyer questions. Every gap becomes a brief.</p></div>
-      <div class="card"><h3>Content scorecard</h3><p>Gives every page one call: protect, refresh, consolidate, kill or watch. Decided by pipeline per dollar, not pageviews.</p></div>
-      <div class="card"><h3>Editorial linter</h3><p>Catches banned phrases, AI tics and unsourced numbers automatically, so editors spend their time on the argument.</p></div>
+      <div class="panel"><h4>AI-search tracker</h4><p>Scores how often the brand shows up in ChatGPT and Perplexity answers to real buyer questions. Every gap becomes a brief.</p></div>
+      <div class="panel"><h4>Content scorecard</h4><p>One call for every page: protect, refresh, consolidate, kill or watch. Decided by pipeline per dollar.</p></div>
+      <div class="panel"><h4>Editorial linter</h4><p>Flags banned phrases, AI tics and unsourced numbers, so editors spend their time on the argument.</p></div>
     </div>
-
     <figure>
-      <img src="dashboard.svg" alt="Lint score of 44 out of 100, AI-search share of voice of 33% against competitors at 58% and 42%, and a content scorecard of 12 pages" loading="lazy">
-      <figcaption>Output from the worked example in the repo: a mid-market accounts-payable company.</figcaption>
+      <img src="dashboard-dark.svg" alt="Lint score of 44 out of 100, AI-search share of voice of 33% against competitors at 58% and 42%, and a content scorecard of 12 pages">
+      <figcaption>Output from the worked example in the repo: a mid-market accounts-payable software company.</figcaption>
     </figure>
   </section>
 
   <section>
-    <h2>What stays human</h2>
-    <p class="sub">AI does most of the hours. None of the decisions.</p>
-    <ul class="human">
-      <li><b>Picking the angle.</b> Deciding what the company believes is the job.</li>
-      <li><b>Approving every number.</b> Each stat and quote has an owner before it reaches a draft.</li>
-      <li><b>The ship decision.</b> The review informs it. A person makes it.</li>
-      <li><b>Anything under a person's name.</b> Experts approve their own posts.</li>
-      <li><b>Killing content.</b> The scorecard recommends. A person decides.</li>
-      <li><b>The interview.</b> The best material comes from a follow-up a person thought to ask.</li>
+    <p class="label">What stays human</p>
+    <h3 class="title">AI does most of the hours. None of the decisions.</h3>
+    <ul class="human" style="margin-top:28px">
+      <li><b>Picking the angle</b>Deciding what the company believes is the job.</li>
+      <li><b>Approving every number</b>Each stat and quote has an owner before it reaches a draft.</li>
+      <li><b>The ship decision</b>The review informs it. A person makes it.</li>
+      <li><b>Anything under a person's name</b>Experts approve their own posts.</li>
+      <li><b>Killing content</b>The scorecard recommends. A person decides.</li>
+      <li><b>The interview</b>The best material comes from a follow-up a person thought to ask.</li>
     </ul>
   </section>
 
   <section id="results">
-    <h2>Track record</h2>
-    <p class="sub">The same thinking, applied to real programs.</p>
-    <div class="roles">
-      <div class="role"><div><h3>Thatch</h3><div class="when">Content Lead · May 2025–present</div></div>
-        <p>Grew ChatGPT visibility 871%, AI citations 130% and AI Overview mentions 1,400%. Cut $220K+ a year by replacing three agencies. Grew organic users 41% and conversions 28% through a full site migration. Built continuing-education programs approved in 21 states.</p></div>
-      <div class="role"><div><h3>Right Percent</h3><div class="when">Director of Content Strategy · 2020–2025</div></div>
-        <p>Led teams of 15+ for venture-backed companies. Ran content strategy behind $200M+ in ad investment. Built AI content workflows for research, production and quality control.</p></div>
-      <div class="role"><div><h3>Layover Marketing</h3><div class="when">Co-founder · 2015–2020</div></div>
+    <p class="label">Track record</p>
+    <h3 class="title">The same thinking, applied to real programs.</h3>
+    <div style="margin-top:28px">
+      <div class="role"><div><h4>Thatch</h4><div class="when">Content Lead · May 2025–present</div></div>
+        <p>Grew ChatGPT visibility <b>871%</b>, AI citations <b>130%</b> and AI Overview mentions <b>1,400%</b>. Cut <b>$220K+</b> a year by replacing three agencies. Grew organic users <b>41%</b> and conversions <b>28%</b> through a full site migration. Built continuing-education programs approved in <b>21 states</b>.</p></div>
+      <div class="role"><div><h4>Right Percent</h4><div class="when">Director of Content Strategy · 2020–2025</div></div>
+        <p>Led teams of <b>15+</b> for venture-backed companies. Ran content strategy behind <b>$200M+</b> in ad investment. Built AI content workflows for research, production and quality control.</p></div>
+      <div class="role"><div><h4>Layover Marketing</h4><div class="when">Co-founder · 2015–2020</div></div>
         <p>Built and ran a content company on SEO-led programs, landing pages and executive ghostwriting.</p></div>
-      <div class="role"><div><h3>NYU Stern</h3><div class="when">Guest instructor · 2024–present</div></div>
+      <div class="role"><div><h4>NYU Stern</h4><div class="when">Guest instructor · 2024–present</div></div>
         <p>Teaches B2B content strategy and AI search to graduate students.</p></div>
     </div>
-    <p style="margin-top:20px"><a href="https://github.com/colin-mag/content-engine/blob/main/TRACK_RECORD.md">Full track record →</a></p>
+    <a class="more" href="https://github.com/colin-mag/content-engine/blob/main/TRACK_RECORD.md">Full track record →</a>
   </section>
 
   <footer>
-    <h2>Let's talk.</h2>
+    <h3 class="title">Let's talk.</h3>
     <p class="sub">I'm looking for a Head of Content role where AI is part of how the team works.</p>
     <div class="cta">
       <a class="btn primary" href="mailto:colin.maguire88@gmail.com">colin.maguire88@gmail.com</a>

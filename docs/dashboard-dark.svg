@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">
+<rect x="0.5" y="0.5" width="899" height="359" rx="14" fill="#14161b" stroke="#2a2e37"/>
+<text x="32" y="44" font-size="15" fill="#f4f4f5" font-weight="600" text-anchor="start">Generic Claude draft</text>
+<text x="32" y="64" font-size="12" fill="#a1a1aa" font-weight="400" text-anchor="start">editorial lint score</text>
+<text x="322" y="44" font-size="15" fill="#f4f4f5" font-weight="600" text-anchor="start">AI-search share of voice</text>
+<text x="322" y="64" font-size="12" fill="#a1a1aa" font-weight="400" text-anchor="start">12 answers · ChatGPT + Perplexity</text>
+<line x1="300" y1="32" x2="300" y2="328" stroke="#2a2e37"/>
+<text x="612" y="44" font-size="15" fill="#f4f4f5" font-weight="600" text-anchor="start">Content scorecard</text>
+<text x="612" y="64" font-size="12" fill="#a1a1aa" font-weight="400" text-anchor="start">12 pages, one decision each</text>
+<line x1="590" y1="32" x2="590" y2="328" stroke="#2a2e37"/>
+<text x="32" y="128" font-size="56" fill="#fbbf24" font-weight="700" text-anchor="start">44</text>
+<text x="106" y="128" font-size="20" fill="#a1a1aa" font-weight="500" text-anchor="start">/100</text>
+<rect x="32" y="157" width="144" height="14" rx="3" fill="#fbbf24" opacity="0.85"/>
+<text x="184" y="168" font-size="12" fill="#f4f4f5" font-weight="400" text-anchor="start">9  banned phrases</text>
+<rect x="32" y="183" width="32" height="14" rx="3" fill="#fbbf24" opacity="0.85"/>
+<text x="72" y="194" font-size="12" fill="#f4f4f5" font-weight="400" text-anchor="start">2  AI tics</text>
+<rect x="32" y="209" width="32" height="14" rx="3" fill="#fbbf24" opacity="0.85"/>
+<text x="72" y="220" font-size="12" fill="#f4f4f5" font-weight="400" text-anchor="start">2  unsourced numbers</text>
+<rect x="32" y="235" width="16" height="14" rx="3" fill="#fbbf24" opacity="0.85"/>
+<text x="56" y="246" font-size="12" fill="#f4f4f5" font-weight="400" text-anchor="start">1  vague claim</text>
+<rect x="32" y="261" width="16" height="14" rx="3" fill="#fbbf24" opacity="0.85"/>
+<text x="56" y="272" font-size="12" fill="#f4f4f5" font-weight="400" text-anchor="start">1  unearned superlative</text>
+<text x="32" y="312" font-size="12" fill="#a1a1aa" font-weight="400" text-anchor="start">15 findings in 219 words</text>
+<text x="322" y="112" font-size="13" fill="#f4f4f5" font-weight="600" text-anchor="start">Northwind</text>
+<rect x="322" y="120" width="190" height="16" rx="4" fill="#2a2e37"/>
+<rect x="322" y="120" width="63" height="16" rx="4" fill="#2dd4bf"/>
+<text x="522" y="133" font-size="13" fill="#f4f4f5" font-weight="600" text-anchor="start">33%</text>
+<text x="322" y="170" font-size="13" fill="#f4f4f5" font-weight="400" text-anchor="start">Brightledger</text>
+<rect x="322" y="178" width="190" height="16" rx="4" fill="#2a2e37"/>
+<rect x="322" y="178" width="110" height="16" rx="4" fill="#52525b"/>
+<text x="522" y="191" font-size="13" fill="#f4f4f5" font-weight="600" text-anchor="start">58%</text>
+<text x="322" y="228" font-size="13" fill="#f4f4f5" font-weight="400" text-anchor="start">Countwell</text>
+<rect x="322" y="236" width="190" height="16" rx="4" fill="#2a2e37"/>
+<rect x="322" y="236" width="80" height="16" rx="4" fill="#52525b"/>
+<text x="522" y="249" font-size="13" fill="#f4f4f5" font-weight="600" text-anchor="start">42%</text>
+<text x="322" y="290" font-size="12" fill="#a1a1aa" font-weight="400" text-anchor="start">Absent from 6 high-priority buyer questions</text>
+<rect x="612.0" y="96" width="85.3" height="22" fill="#2dd4bf"/>
+<rect x="697.3" y="96" width="42.7" height="22" fill="#2563eb"/>
+<rect x="740.0" y="96" width="21.3" height="22" fill="#7c3aed"/>
+<rect x="761.3" y="96" width="42.7" height="22" fill="#b91c1c"/>
+<rect x="804.0" y="96" width="64.0" height="22" fill="#52525b"/>
+<rect x="612" y="140" width="12" height="12" rx="3" fill="#2dd4bf"/>
+<text x="632" y="150" font-size="13" fill="#f4f4f5" font-weight="400" text-anchor="start">Protect</text>
+<text x="762" y="150" font-size="13" fill="#f4f4f5" font-weight="600" text-anchor="end">4</text>
+<rect x="612" y="166" width="12" height="12" rx="3" fill="#2563eb"/>
+<text x="632" y="176" font-size="13" fill="#f4f4f5" font-weight="400" text-anchor="start">Refresh</text>
+<text x="762" y="176" font-size="13" fill="#f4f4f5" font-weight="600" text-anchor="end">2</text>
+<rect x="612" y="192" width="12" height="12" rx="3" fill="#7c3aed"/>
+<text x="632" y="202" font-size="13" fill="#f4f4f5" font-weight="400" text-anchor="start">Consolidate</text>
+<text x="762" y="202" font-size="13" fill="#f4f4f5" font-weight="600" text-anchor="end">1</text>
+<rect x="612" y="218" width="12" height="12" rx="3" fill="#b91c1c"/>
+<text x="632" y="228" font-size="13" fill="#f4f4f5" font-weight="400" text-anchor="start">Kill</text>
+<text x="762" y="228" font-size="13" fill="#f4f4f5" font-weight="600" text-anchor="end">2</text>
+<rect x="612" y="244" width="12" height="12" rx="3" fill="#52525b"/>
+<text x="632" y="254" font-size="13" fill="#f4f4f5" font-weight="400" text-anchor="start">Watch</text>
+<text x="762" y="254" font-size="13" fill="#f4f4f5" font-weight="600" text-anchor="end">3</text>
+<text x="612" y="294" font-size="12" fill="#a1a1aa" font-weight="400" text-anchor="start">Decided by pipeline per $, decay and overlap</text>
+</svg>
