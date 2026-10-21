@@ -10,9 +10,9 @@
   python -m engine run runs/my-piece repurpose
 
   python -m engine lint path/to/draft.md [--min-score 80]
-  python -m engine ai-search score examples/northwind-synthetic/ai-search
-  python -m engine ai-search capture examples/northwind-synthetic/ai-search
-  python -m engine scorecard examples/northwind-synthetic/content_inventory.csv
+  python -m engine ai-search score examples/northwind/ai-search
+  python -m engine ai-search capture examples/northwind/ai-search
+  python -m engine scorecard examples/northwind/content_inventory.csv
 
 Add --dry-run to any model stage to write the full prompt instead of calling the API.
 """
