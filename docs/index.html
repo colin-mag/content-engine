@@ -34,13 +34,23 @@ a{color:inherit}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:500;color:var(--muted);
   border:1px solid var(--line);border-radius:999px;padding:6px 14px 6px 10px;background:rgba(255,255,255,.02)}
 .eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent)}
-h1{font-size:clamp(36px,6.6vw,76px);line-height:1.02;letter-spacing:-.04em;font-weight:800;margin:28px 0 26px}
+h1{font-size:clamp(36px,6.6vw,76px);line-height:1.02;letter-spacing:-.04em;font-weight:800;margin:40px 0 26px}
 h1 span{display:block}
 h1 .dim{color:var(--faint)}
 .lede{font-size:clamp(18px,2vw,21px);line-height:1.6;color:var(--muted);max-width:640px;margin:0}
 .lede b{color:var(--ink);font-weight:600}
-.proof{margin:28px 0 0;font-size:14px;color:var(--faint)}
-.proof b{color:var(--muted);font-weight:500}
+.who{display:flex;align-items:center;gap:16px;margin:0 0 4px}
+.who .mark{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-weight:800;font-size:20px;letter-spacing:-.02em;color:var(--accent-ink);background:linear-gradient(135deg,#5eead4,#14b8a6);box-shadow:0 8px 30px rgba(45,212,191,.25)}
+.who .nm{font-size:clamp(26px,3vw,34px);font-weight:700;letter-spacing:-.025em;line-height:1.1}
+.who .tl{font-size:15px;color:var(--muted);margin-top:4px}
+.quip{display:inline-block;margin:18px 0 0;font-size:15px;color:var(--accent);font-style:italic}
+.trust{display:grid;grid-template-columns:260px 1fr;gap:40px;align-items:center;margin:72px 0 0;padding:36px 0;border-top:1px solid var(--line)}
+.trust .yrs b{display:block;white-space:nowrap;margin-bottom:10px;font-size:58px;font-weight:800;letter-spacing:-.05em;line-height:1}
+.trust .yrs span{color:var(--muted);font-size:14px}
+.wall{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.wall span{display:flex;align-items:center;justify-content:center;height:58px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:#c4c4cc;font-weight:700;font-size:16px;letter-spacing:-.01em;transition:color .2s,border-color .2s}
+.wall span:hover{color:var(--ink);border-color:#3a3f4a}
+.wall-label{grid-column:1/-1;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin-bottom:4px}
 
 /* two doors */
 .doors{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:48px}
@@ -60,7 +70,7 @@ h1 .dim{color:var(--faint)}
 .door.secondary .go{border:1px solid var(--line);color:var(--ink)}
 
 /* stats */
-.stats{display:grid;grid-template-columns:repeat(4,1fr);margin:72px 0 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);margin:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .stat{padding:28px 4px}
 .stat+.stat{border-left:1px solid var(--line);padding-left:24px}
 .stat b{display:block;font-size:clamp(30px,3.8vw,44px);font-weight:700;letter-spacing:-.03em;line-height:1.05}
@@ -113,7 +123,9 @@ footer{margin-top:110px;padding:64px 0 80px;border-top:1px solid var(--line)}
 .btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 
 @media (max-width:820px){
-  .doors,.compare,.grid3,.human{grid-template-columns:1fr}
+  .doors,.compare,.grid3,.human,.trust{grid-template-columns:1fr}
+  .trust{gap:24px}
+  .wall{grid-template-columns:repeat(2,1fr)}
   .stats{grid-template-columns:1fr 1fr}
   .stat:nth-child(3){border-left:0;padding-left:4px}
   .stat:nth-child(n+3){border-top:1px solid var(--line)}
@@ -128,7 +140,7 @@ footer{margin-top:110px;padding:64px 0 80px;border-top:1px solid var(--line)}
 <body>
 <div class="wrap">
   <header class="top">
-    <span class="name">Colin Maguire</span>
+    <span class="name">Content Engine</span>
     <nav>
       <a href="#how">How it works</a>
       <a href="#results">Track record</a>
@@ -137,10 +149,10 @@ footer{margin-top:110px;padding:64px 0 80px;border-top:1px solid var(--line)}
   </header>
 
   <div class="hero">
-    <span class="eyebrow"><i></i>Content Engine · portfolio project</span>
+    <div class="who"><span class="mark">CM</span><div><div class="nm">Colin Maguire</div><div class="tl">Head of Content Marketing · AI search · Los Angeles</div></div></div>
+    <span class="quip">Your favorite content marketer's favorite content marketer.</span>
     <h1><span>AI does the production.</span><span class="dim">People make the calls.</span></h1>
     <p class="lede">This is the content operation I'd run for you. <b>One expert interview becomes a week of content.</b> Every page is judged on pipeline, not traffic. And you always know whether buyers find you in ChatGPT.</p>
-    <p class="proof">14 years in content · <b>Reddit, Uber, DoorDash, Ramp, MetaMask</b> · NYU Stern guest instructor</p>
   </div>
 
   <div class="doors">
@@ -169,6 +181,15 @@ footer{margin-top:110px;padding:64px 0 80px;border-top:1px solid var(--line)}
       </ul>
       <span class="go">See the code on GitHub →</span>
     </a>
+  </div>
+
+  <div class="trust">
+    <div class="yrs"><b>14 years</b><span>leading content across tech, healthcare and regulated industries. Guest instructor at NYU Stern.</span></div>
+    <div class="wall" aria-label="Clients">
+      <div class="wall-label">Content for teams at</div>
+      <span>Reddit</span><span>Uber</span><span>DoorDash</span><span>Ramp</span><span>MetaMask</span>
+      <span>Brightwheel</span><span>Zenefits</span><span>Podium</span><span>Owner.com</span><span>IDEO U</span>
+    </div>
   </div>
 
   <div class="stats" aria-label="Results">
